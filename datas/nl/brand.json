@@ -1,0 +1,90 @@
+{
+    "ninja": {
+        "model1": {
+            "name": "Ninja 400",
+            "description": "De Ninja 400 is een lichtgewicht en krachtige sportmotor, ideaal voor zowel beginnende als ervaren rijders.",
+            "img": "../images/ninja/ninja400.png"
+        },
+        "model2": {
+            "name": "Ninja 650",
+            "description": "De Ninja 650 biedt een perfecte balans tussen kracht en hantering, ideaal voor dagelijkse woon-werkverkeer en sportieve uitstapjes.",
+            "img": "../images/ninja/ninja650.png"
+        },
+        "model3": {
+            "name": "Ninja 1000",
+            "description": "De Ninja 1000 is een hoogwaardige sportmotor, ontworpen voor veeleisende rijders die op zoek zijn naar hoge prestaties.",
+            "img": "../images/ninja/ninja1000.jpg"
+        },
+        "model4": {
+            "name": "Ninja H2",
+            "description": "De Ninja H2 is een supermotor uitgerust met een compressor, die uitzonderlijke prestaties biedt voor de meest veeleisende rijders.",
+            "img": "../images/ninja/ninjaH2.png"
+        }
+    },
+    "ducati": {
+        "model1": {
+            "name": "Monster",
+            "description": "De Monster is een iconische naked bike van Ducati, bekend om zijn agressieve design en hoge prestaties.",
+            "img": "../images/ducati/ducatiMonster.jpg"
+        },
+        "model2": {
+            "name": "Panigale V4",
+            "description": "De Panigale V4 is een hoogwaardige sportmotor, uitgerust met een krachtige V4-motor en geavanceerde technologieën.",
+            "img": "../images/ducati/ducatiPanigaleV4.jpg"
+        },
+        "model3": {
+            "name": "Multistrada",
+            "description": "De Multistrada is een veelzijdige motor, ideaal voor dagelijks woon-werkverkeer en avonturen op de weg.",
+            "img": "../images/ducati/ducatiMultistrada.jpg"
+        },
+        "model4": {
+            "name": "Diavel",
+            "description": "De Diavel is een krachtige en elegante cruiser motor, ontworpen voor rijders die op zoek zijn naar een mix van stijl en prestaties.",
+            "img": "../images/ducati/ducatiDiavel.jpg"
+        }
+    },
+    "honda": {
+        "model1": {
+            "name": "CB500F",
+            "description": "De CB500F is een veelzijdige naked bike, ideaal voor zowel beginnende als ervaren rijders.",
+            "img": "../images/honda/hondaCB500F.jpeg"
+        },
+        "model2": {
+            "name": "CBR650R",
+            "description": "De CBR650R is een krachtige en wendbare sportmotor, ontworpen voor rijders die op zoek zijn naar hoge prestaties.",
+            "img": "../images/honda/hondaCBR650R.png"
+        },
+        "model3": {
+            "name": "Africa Twin",
+            "description": "De Africa Twin is een veelzijdige avonturenmotor, ideaal voor dagelijks woon-werkverkeer en off-road avonturen.",
+            "img": "../images/honda/hondaAfricaTwin.jpg"
+        },
+        "model4": {
+            "name": "Gold Wing",
+            "description": "De Gold Wing is een hoogwaardige toermotor, ontworpen voor lange afstanden en comfort.",
+            "img": "../images/honda/hondaGoldWing.png"
+        }
+    },
+    "kawasaki": {
+        "model1": {
+            "name": "Z650",
+            "description": "De Z650 is een veelzijdige naked bike, ideaal voor zowel beginnende als ervaren rijders.",
+            "img": "../images/kawasaki/kawasakiZ650.png"
+        },
+        "model2": {
+            "name": "Ninja ZX-6R",
+            "description": "De Ninja ZX-6R is een krachtige en wendbare sportmotor, ontworpen voor rijders die op zoek zijn naar hoge prestaties.",
+            "img": "../images/kawasaki/kawasakiZX6R.jpg"
+        },
+        "model3": {
+            "name": "Versys 650",
+            "description": "De Versys 650 is een veelzijdige avonturenmotor, ideaal voor dagelijks woon-werkverkeer en off-road avonturen.",
+            "img": "../images/kawasaki/kawasakiVersys650.png"
+        },
+        "model4": {
+            "name": "Vulcan S",
+            "description": "De Vulcan S is een krachtige en elegante cruiser motor, ontworpen voor rijders die op zoek zijn naar een mix van stijl en prestaties.",
+            "img": "../images/kawasaki/kawasakiVulcanS.png"
+        }
+    }
+}

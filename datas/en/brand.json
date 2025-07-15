@@ -1,0 +1,90 @@
+{
+    "ninja": {
+        "model1": {
+            "name": "Ninja 400",
+            "description": "The Ninja 400 is a lightweight and powerful sports bike, ideal for both beginner and experienced riders.",
+            "img": "../images/ninja/ninja400.png"
+        },
+        "model2": {
+            "name": "Ninja 650",
+            "description": "The Ninja 650 offers a perfect balance between power and handling, ideal for daily commutes and sporty outings.",
+            "img": "../images/ninja/ninja650.png"
+        },
+        "model3": {
+            "name": "Ninja 1000",
+            "description": "The Ninja 1000 is a high-end sports bike, designed for demanding riders seeking high performance.",
+            "img": "../images/ninja/ninja1000.jpg"
+        },
+        "model4": {
+            "name": "Ninja H2",
+            "description": "The Ninja H2 is a super bike equipped with a supercharger, offering exceptional performance for the most demanding riders.",
+            "img": "../images/ninja/ninjaH2.png"
+        }
+    },
+    "ducati": {
+        "model1": {
+            "name": "Monster",
+            "description": "The Monster is an iconic naked bike from Ducati, known for its aggressive design and high performance.",
+            "img": "../images/ducati/ducatiMonster.jpg"
+        },
+        "model2": {
+            "name": "Panigale V4",
+            "description": "The Panigale V4 is a high-end sports bike, equipped with a powerful V4 engine and advanced technologies.",
+            "img": "../images/ducati/ducatiPanigaleV4.jpg"
+        },
+        "model3": {
+            "name": "Multistrada",
+            "description": "The Multistrada is a versatile bike, ideal for daily commutes and road adventures.",
+            "img": "../images/ducati/ducatiMultistrada.jpg"
+        },
+        "model4": {
+            "name": "Diavel",
+            "description": "The Diavel is a powerful and elegant cruiser bike, designed for riders seeking a blend of style and performance.",
+            "img": "../images/ducati/ducatiDiavel.jpg"
+        }
+    },
+    "honda": {
+        "model1": {
+            "name": "CB500F",
+            "description": "The CB500F is a versatile naked bike, ideal for both beginner and experienced riders.",
+            "img": "../images/honda/hondaCB500F.jpeg"
+        },
+        "model2": {
+            "name": "CBR650R",
+            "description": "The CBR650R is a powerful and maneuverable sports bike, designed for riders seeking high performance.",
+            "img": "../images/honda/hondaCBR650R.png"
+        },
+        "model3": {
+            "name": "Africa Twin",
+            "description": "The Africa Twin is a versatile adventure bike, ideal for daily commutes and off-road adventures.",
+            "img": "../images/honda/hondaAfricaTwin.jpg"
+        },
+        "model4": {
+            "name": "Gold Wing",
+            "description": "The Gold Wing is a high-end touring bike, designed for long trips and comfort.",
+            "img": "../images/honda/hondaGoldWing.png"
+        }
+    },
+    "kawasaki": {
+        "model1": {
+            "name": "Z650",
+            "description": "The Z650 is a versatile naked bike, ideal for both beginner and experienced riders.",
+            "img": "../images/kawasaki/kawasakiZ650.png"
+        },
+        "model2": {
+            "name": "Ninja ZX-6R",
+            "description": "The Ninja ZX-6R is a powerful and maneuverable sports bike, designed for riders seeking high performance.",
+            "img": "../images/kawasaki/kawasakiZX6R.jpg"
+        },
+        "model3": {
+            "name": "Versys 650",
+            "description": "The Versys 650 is a versatile adventure bike, ideal for daily commutes and off-road adventures.",
+            "img": "../images/kawasaki/kawasakiVersys650.png"
+        },
+        "model4": {
+            "name": "Vulcan S",
+            "description": "The Vulcan S is a powerful and elegant cruiser bike, designed for riders seeking a blend of style and performance.",
+            "img": "../images/kawasaki/kawasakiVulcanS.png"
+        }
+    }
+}

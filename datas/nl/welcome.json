@@ -1,0 +1,26 @@
+{
+    "title": "Welkom in de wereld van motoren",
+    "subTitle": "Kies het merk",
+    "brands": {
+        "ninja": {
+            "name": "Ninja",
+            "description": "De Ninja is een lijn van sportmotoren geproduceerd door Kawasaki, bekend om hun hoge prestaties en agressieve ontwerp.",
+            "image": "./images/ninja/ninja.png"
+        },
+        "ducati": {
+            "name": "Ducati",
+            "description": "Ducati is een Italiaanse fabrikant van motoren, beroemd om zijn sportmotoren en geavanceerde technologie.",
+            "image": "./images/ducati/ducati.png"
+        },
+        "honda": {
+            "name": "Honda",
+            "description": "Honda is een Japanse fabrikant van auto's en motoren, gerenommeerd voor de betrouwbaarheid en innovatie van zijn producten.",
+            "image": "./images/honda/honda.png"
+        },
+        "kawasaki": {
+            "name": "Kawasaki",
+            "description": "Kawasaki is een Japanse motorfabrikant, bekend om zijn krachtige motoren en geavanceerde technologieën.",
+            "image": "./images/kawasaki/kawazaki.png"
+        }
+    }
+}

@@ -1,0 +1,90 @@
+{
+  "Ninja": {
+    "Ninja 400": {
+      "description": "The Ninja 400 is a lightweight and powerful sports bike, ideal for both beginner and experienced riders.",
+      "img": "../images/ninja/ninja400.png",
+      "price": "7 499 €"
+    },
+    "Ninja 650": {
+      "description": "The Ninja 650 offers a perfect balance between power and handling, ideal for daily commutes and sporty outings.",
+      "img": "../images/ninja/ninja650.png",
+      "price": "8 999 €"
+    },
+    "Ninja 1000": {
+      "description": "The Ninja 1000 is a high-end sports bike, designed for demanding riders seeking high performance.",
+      "img": "../images/ninja/ninja1000.jpg",
+      "price": "14 999 €"
+    },
+    "Ninja H2": {
+      "description": "The Ninja H2 is a super bike equipped with a supercharger, offering exceptional performance for the most demanding riders.",
+      "img": "../images/ninja/ninjaH2.png",
+      "price": "28 999 €"
+    }
+  },
+  "Ducati": {
+    "Monster": {
+      "description": "The Monster is an iconic naked bike from Ducati, known for its aggressive design and high performance.",
+      "img": "../images/ducati/ducatiMonster.jpg",
+      "price": "11 999 €"
+    },
+    "Panigale V4": {
+      "description": "The Panigale V4 is a high-end sports bike, equipped with a powerful V4 engine and advanced technologies.",
+      "img": "../images/ducati/ducatiPanigaleV4.jpg",
+      "price": "25 999 €"
+    },
+    "Multistrada": {
+      "description": "The Multistrada is a versatile bike, ideal for daily commutes and road adventures.",
+      "img": "../images/ducati/ducatiMultistrada.jpg",
+      "price": "16 999 €"
+    },
+    "Diavel": {
+      "description": "The Diavel is a powerful and elegant cruiser bike, designed for riders seeking a blend of style and performance.",
+      "img": "../images/ducati/ducatiDiavel.jpg",
+      "price": "20 999 €"
+    }
+  },
+  "Honda": {
+    "CB500F": {
+      "description": "The CB500F is a versatile naked bike, ideal for both beginner and experienced riders.",
+      "img": "../images/honda/hondaCB500F.jpeg",
+      "price": "6 499 €"
+    },
+    "CBR650R": {
+      "description": "The CBR650R is a powerful and maneuverable sports bike, designed for riders seeking high performance.",
+      "img": "../images/honda/hondaCBR650R.png",
+      "price": "9 499 €"
+    },
+    "Africa Twin": {
+      "description": "The Africa Twin is a versatile adventure bike, ideal for daily commutes and off-road adventures.",
+      "img": "../images/honda/hondaAfricaTwin.jpg",
+      "price": "14 999 €"
+    },
+    "Gold Wing": {
+      "description": "The Gold Wing is a high-end touring bike, designed for long trips and comfort.",
+      "img": "../images/honda/hondaGoldWing.png",
+      "price": "29 999 €"
+    }
+  },
+  "Kawasaki": {
+    "Z650": {
+      "description": "The Z650 is a versatile naked bike, ideal for both beginner and experienced riders.",
+      "img": "../images/kawasaki/kawasakiZ650.png",
+      "price": "7 499 €"
+    },
+    "Ninja ZX-6R": {
+      "description": "The Ninja ZX-6R is a powerful and maneuverable sports bike, designed for riders seeking high performance.",
+      "img": "../images/kawasaki/kawasakiZX6R.jpg",
+      "price": "10 999 €"
+    },
+    "Versys 650": {
+      "description": "The Versys 650 is a versatile adventure bike, ideal for daily commutes and off-road adventures.",
+      "img": "../images/kawasaki/kawasakiVersys650.png",
+      "price": "8 499 €"
+    },
+    "Vulcan S": {
+      "description": "The Vulcan S is a powerful and elegant cruiser bike, designed for riders seeking a blend of style and performance.",
+      "img": "../images/kawasaki/kawasakiVulcanS.png",
+      "price": "7 999 €"
+    }
+  }
+}

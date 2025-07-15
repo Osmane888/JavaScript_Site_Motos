@@ -1,0 +1,90 @@
+{
+  "Ninja": {
+    "Ninja 400": {
+      "description": "De Ninja 400 is een lichtgewicht en krachtige sportmotor, ideaal voor zowel beginnende als ervaren rijders.",
+      "img": "../images/ninja/ninja400.png",
+      "price": "7 499 €"
+    },
+    "Ninja 650": {
+      "description": "De Ninja 650 biedt een perfecte balans tussen kracht en hantering, ideaal voor dagelijks woon-werkverkeer en sportieve uitstapjes.",
+      "img": "../images/ninja/ninja650.png",
+      "price": "8 999 €"
+    },
+    "Ninja 1000": {
+      "description": "De Ninja 1000 is een hoogwaardige sportmotor, ontworpen voor veeleisende rijders die op zoek zijn naar hoge prestaties.",
+      "img": "../images/ninja/ninja1000.jpg",
+      "price": "14 999 €"
+    },
+    "Ninja H2": {
+      "description": "De Ninja H2 is een supermotor uitgerust met een compressor, die uitzonderlijke prestaties biedt voor de meest veeleisende rijders.",
+      "img": "../images/ninja/ninjaH2.png",
+      "price": "28 999 €"
+    }
+  },
+  "Ducati": {
+    "Monster": {
+      "description": "De Monster is een iconische naked bike van Ducati, bekend om zijn agressieve design en hoge prestaties.",
+      "img": "../images/ducati/ducatiMonster.jpg",
+      "price": "11 999 €"
+    },
+    "Panigale V4": {
+      "description": "De Panigale V4 is een hoogwaardige sportmotor, uitgerust met een krachtige V4-motor en geavanceerde technologieën.",
+      "img": "../images/ducati/ducatiPanigaleV4.jpg",
+      "price": "25 999 €"
+    },
+    "Multistrada": {
+      "description": "De Multistrada is een veelzijdige motor, ideaal voor dagelijks woon-werkverkeer en avonturen op de weg.",
+      "img": "../images/ducati/ducatiMultistrada.jpg",
+      "price": "16 999 €"
+    },
+    "Diavel": {
+      "description": "De Diavel is een krachtige en elegante cruiser motor, ontworpen voor rijders die op zoek zijn naar een mix van stijl en prestaties.",
+      "img": "../images/ducati/ducatiDiavel.jpg",
+      "price": "20 999 €"
+    }
+  },
+  "Honda": {
+    "CB500F": {
+      "description": "De CB500F is een veelzijdige naked bike, ideaal voor zowel beginnende als ervaren rijders.",
+      "img": "../images/honda/hondaCB500F.jpeg",
+      "price": "6 499 €"
+    },
+    "CBR650R": {
+      "description": "De CBR650R is een krachtige en wendbare sportmotor, ontworpen voor rijders die op zoek zijn naar hoge prestaties.",
+      "img": "../images/honda/hondaCBR650R.png",
+      "price": "9 499 €"
+    },
+    "Africa Twin": {
+      "description": "De Africa Twin is een veelzijdige avonturenmotor, ideaal voor dagelijks woon-werkverkeer en off-road avonturen.",
+      "img": "../images/honda/hondaAfricaTwin.jpg",
+      "price": "14 999 €"
+    },
+    "Gold Wing": {
+      "description": "De Gold Wing is een hoogwaardige toermotor, ontworpen voor lange afstanden en comfort.",
+      "img": "../images/honda/hondaGoldWing.png",
+      "price": "29 999 €"
+    }
+  },
+  "Kawasaki": {
+    "Z650": {
+      "description": "De Z650 is een veelzijdige naked bike, ideaal voor zowel beginnende als ervaren rijders.",
+      "img": "../images/kawasaki/kawasakiZ650.png",
+      "price": "7 499 €"
+    },
+    "Ninja ZX-6R": {
+      "description": "De Ninja ZX-6R is een krachtige en wendbare sportmotor, ontworpen voor rijders die op zoek zijn naar hoge prestaties.",
+      "img": "../images/kawasaki/kawasakiZX6R.jpg",
+      "price": "10 999 €"
+    },
+    "Versys 650": {
+      "description": "De Versys 650 is een veelzijdige avonturenmotor, ideaal voor dagelijks woon-werkverkeer en off-road avonturen.",
+      "img": "../images/kawasaki/kawasakiVersys650.png",
+      "price": "8 499 €"
+    },
+    "Vulcan S": {
+      "description": "De Vulcan S is een krachtige en elegante cruiser motor, ontworpen voor rijders die op zoek zijn naar een mix van stijl en prestaties.",
+      "img": "../images/kawasaki/kawasakiVulcanS.png",
+      "price": "7 999 €"
+    }
+  }
+}

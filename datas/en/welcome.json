@@ -1,0 +1,26 @@
+{
+    "title": "Welcome to the world of motorcycles",
+    "subTitle": "Choose the brand",
+    "brands": {
+        "ninja": {
+            "name": "Ninja",
+            "description": "The Ninja is a line of sport motorcycles produced by Kawasaki, known for their high performance and aggressive design.",
+            "image": "./images/ninja/ninja.png"
+        },
+        "ducati": {
+            "name": "Ducati",
+            "description": "Ducati is an Italian manufacturer of motorcycles, famous for its sport bikes and cutting-edge technology.",
+            "image": "./images/ducati/ducati.png"
+        },
+        "honda": {
+            "name": "Honda",
+            "description": "Honda is a Japanese manufacturer of automobiles and motorcycles, renowned for the reliability and innovation of its products.",
+            "image": "./images/honda/honda.png"
+        },
+        "kawasaki": {
+            "name": "Kawasaki",
+            "description": "Kawasaki is a Japanese motorcycle manufacturer, known for its powerful motorcycles and advanced technologies.",
+            "image": "./images/kawasaki/kawazaki.png"
+        }
+    }
+}

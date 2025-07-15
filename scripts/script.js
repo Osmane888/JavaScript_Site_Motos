@@ -1,0 +1,139 @@
+/* code à potentiel de recyclage
+let button = document.getElementById('language');
+    button.addEventListener('click', function() {
+        console.log(langue);
+    });
+*/
+
+
+ document.addEventListener('DOMContentLoaded', function() {
+    sessionStorage.setItem('langue', 'fr');
+    sessionStorage.setItem('pageLoaded', 'welcome');
+    loadWelcome(sessionStorage.getItem('langue'));
+
+    let titre = divTextCreator('id', 'titre');
+    let description = divTextCreator('id', 'description');
+    document.getElementById('header').appendChild(titre);
+    document.getElementById('header').appendChild(description);
+});
+
+
+function changeLanguage(language) {
+    sessionStorage.setItem('langue', language);
+    switch(sessionStorage.getItem('pageLoaded')) {
+        case 'loadBrand':
+            loadBrand(sessionStorage.getItem('langue'));
+            break;
+        case 'loadModel':
+            loadModel(sessionStorage.getItem('langue'));
+            break;
+        default:
+            loadWelcome(sessionStorage.getItem('langue'));
+            break;
+    }
+    console.log(sessionStorage.getItem('langue'));
+}
+
+function loadWelcome(language){
+    sessionStorage.setItem('pageLoaded', 'welcome');
+
+    fetchJSON(language, 'welcome').then(data => {
+        document.getElementById('titre').textContent = data.title;
+        document.getElementById('description').textContent = data.subTitle;
+
+        const content = document.getElementById('content');
+        content.innerHTML = '';
+
+        const brands = data.brands;
+        Object.entries(brands).forEach(([key, brand]) => {
+
+            let divCurrentBrand = document.createElement('div');
+            divCurrentBrand.id = key;
+            divCurrentBrand.className = "brands";
+
+            let divCurrentBrandTitle = divTextCreator('class', 'title', brand.name);
+            let divCurrentBrandDescription = divTextCreator('class', 'description', brand.description);
+            let divCurrentBrandImage = imageCreator('logos', brand.image);
+
+            divCurrentBrand.appendChild(divCurrentBrandTitle, divCurrentBrandDescription);
+            divCurrentBrand.appendChild(divCurrentBrandDescription);
+            divCurrentBrand.appendChild(divCurrentBrandImage);
+            document.getElementById('content').appendChild(divCurrentBrand);
+
+            console.log(divCurrentBrand);
+        })
+    });
+}
+
+function loadBrand(language, brand){
+    sessionStorage.setItem('pageLoaded', 'brand');
+
+    fetchJSON(language, 'brand').then(data => {
+        
+    })
+}
+
+function loadModel(language, model){
+    
+}
+
+
+function fetchJSON(langue, jsonFile){
+    if(!langue && !jsonFile){
+        console.log('Aucune langue et/ou fichier json spécifié en paramètre');
+        return null;
+    }
+    else if(!(langue === 'fr' || langue === 'nl' || langue === 'en')){
+        console.log('Erreur nom de la langue');
+        return null;
+    }
+    else if(!(jsonFile === 'welcome' || jsonFile === 'model' || jsonFile === 'brand')){
+        console.log('Erreur nom du fichier JSON');
+        return null;
+    }
+
+    // Récupération des données du JSON
+    return fetch(`../datas/${langue}/${jsonFile}.json`)
+        .then(data => {
+            return data.json();
+        })
+        .catch(error => {
+            console.error('Erreur du chargement du json', error);
+            return Promise.reject(error);
+        })
+}
+
+function divTextCreator(attribute, name, content){
+    /*
+    cette fonction a pour but d'automatiser la création de div contenant du texte dans le HTML, il faut spécifier l'attribut 
+    (tel que id ou classe), le nom de cet attribut, le type de ce que contiendra la div et son contenu.
+    */
+
+    if(attribute === null || name === null || content === null){
+        console.log('erreur dans la création de la vie, il faut noter "img" ou "text" pour spécifier le type');
+        return null;
+    } 
+
+    let div = document.createElement('div');
+    div.setAttribute(attribute, name);
+    div.textContent = content;
+    return div;
+}
+
+function imageCreator(className, url){
+    /*
+    cette fonction a pour but d'automatiser la création des balises img dans le HTML. 
+    Il faut spécifier le nom de la classe et la source de l'image.
+    */
+
+    if(className === null || url === null){
+        console.log("erreur dans la création de la balise d'image");
+        return null;
+    } 
+
+    const img = document.createElement('img');
+    img.className = className;
+    img.src = url;
+    img.alt = 'Image';
+    return img;
+}
