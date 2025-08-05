@@ -7,20 +7,26 @@ let button = document.getElementById('language');
 
 
  document.addEventListener('DOMContentLoaded', function() {
+    /*
+    Initialisation du site avec l'ajout d'une langue en sessionStorage (par défaut fr) et le chargement par défaut de la page d'accueil.
+    Création des divs de titre et sous-titre qui verront leur contenu changer pendant la navigation.
+    */
+
     sessionStorage.setItem('langue', 'fr');
-    sessionStorage.setItem('pageLoaded', 'welcome');
+    sessionStorage.setItem('currentPage', 'welcome');
     loadWelcome(sessionStorage.getItem('langue'));
 
     let titre = divTextCreator('id', 'titre');
     let description = divTextCreator('id', 'description');
     document.getElementById('header').appendChild(titre);
     document.getElementById('header').appendChild(description);
+    loadBrand('fr', 'ninja');
 });
 
 
 function changeLanguage(language) {
     sessionStorage.setItem('langue', language);
-    switch(sessionStorage.getItem('pageLoaded')) {
+    switch(sessionStorage.getItem('currentPage')) {
         case 'loadBrand':
             loadBrand(sessionStorage.getItem('langue'));
             break;
@@ -35,7 +41,9 @@ function changeLanguage(language) {
 }
 
 function loadWelcome(language){
-    sessionStorage.setItem('pageLoaded', 'welcome');
+
+    sessionStorage.setItem('currentPage', 'welcome');
+    document.getElementById('content').innerHTML = '';
 
     fetchJSON(language, 'welcome').then(data => {
         document.getElementById('titre').textContent = data.title;
@@ -59,24 +67,41 @@ function loadWelcome(language){
             divCurrentBrand.appendChild(divCurrentBrandDescription);
             divCurrentBrand.appendChild(divCurrentBrandImage);
             document.getElementById('content').appendChild(divCurrentBrand);
-
-            console.log(divCurrentBrand);
         })
     });
 }
 
-function loadBrand(language, brand){
-    sessionStorage.setItem('pageLoaded', 'brand');
+function loadBrand(language, currentBrand){
+
+    sessionStorage.setItem('currentPage', 'brand');
+    document.getElementById('content').innerHTML = '';
 
     fetchJSON(language, 'brand').then(data => {
-        
+        const marque = currentBrand;
+
+        document.getElementById('titre').textContent = marque;
+        document.getElementById('description').textContent = 'Voici les modèles iconiques de ' + marque;
+
+        let divModels = document.createElement('div');
+
+        const models = data[currentBrand];
+        console.log(models);
+        let count = 1;
+        Object.values(models).forEach( model => {
+
+            let divCurrentModel = document.createElement('div');
+            divCurrentModel.id = 'model' + count;
+            divCurrentModel.className = 'models';
+
+
+           console.log(model);
+           count++;
+        })
     })
 }
 
 function loadModel(language, model){
-    
 }
-
 
 function fetchJSON(langue, jsonFile){
     if(!langue && !jsonFile){
