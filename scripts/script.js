@@ -20,7 +20,6 @@ let button = document.getElementById('language');
     let description = divTextCreator('id', 'description');
     document.getElementById('header').appendChild(titre);
     document.getElementById('header').appendChild(description);
-    loadBrand('fr', 'ninja');
 });
 
 
@@ -58,6 +57,14 @@ function loadWelcome(language){
             let divCurrentBrand = document.createElement('div');
             divCurrentBrand.id = key;
             divCurrentBrand.className = "brands";
+            
+            /* Première version du bouton qui est la plus "simple" puis qu'elle consiste à ajouter l'attribut onclick
+            divCurrentBrand.setAttribute('onclick', `loadBrand('${language}', '${key}')`);
+            */
+            // Version 2 plus lisible
+            divCurrentBrand.addEventListener('click', () => {
+                loadBrand(language, key);
+            });
 
             let divCurrentBrandTitle = divTextCreator('class', 'title', brand.name);
             let divCurrentBrandDescription = divTextCreator('class', 'description', brand.description);
@@ -73,10 +80,11 @@ function loadWelcome(language){
 
 function loadBrand(language, currentBrand){
 
-    sessionStorage.setItem('currentPage', 'brand');
+    
     document.getElementById('content').innerHTML = '';
 
     fetchJSON(language, 'brand').then(data => {
+        sessionStorage.setItem('previousPage', sessionStorage.getItem('currentPage'));
         const marque = currentBrand;
 
         document.getElementById('titre').textContent = marque;
@@ -97,6 +105,11 @@ function loadBrand(language, currentBrand){
            console.log(model);
            count++;
         })
+
+        sessionStorage.setItem('currentPage', 'brand');
+
+        console.log('currentPage', sessionStorage.getItem('currentPage'));
+        console.log('previousPage', sessionStorage.getItem('previousPage'));
     })
 }
 
