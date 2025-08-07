@@ -14,6 +14,7 @@ let button = document.getElementById('language');
 
     sessionStorage.setItem('langue', 'fr');
     sessionStorage.setItem('currentPage', 'welcome');
+    sessionStorage.setItem('previousPage', '');
     loadWelcome(sessionStorage.getItem('langue'));
 
     let titre = divTextCreator('id', 'titre');
@@ -26,11 +27,11 @@ let button = document.getElementById('language');
 function changeLanguage(language) {
     sessionStorage.setItem('langue', language);
     switch(sessionStorage.getItem('currentPage')) {
-        case 'loadBrand':
-            loadBrand(sessionStorage.getItem('langue'));
+        case 'brand':
+            loadBrand(sessionStorage.getItem('langue'), sessionStorage.getItem('currentBrand'));
             break;
-        case 'loadModel':
-            loadModel(sessionStorage.getItem('langue'));
+        case 'model':
+            loadModel(sessionStorage.getItem('langue'), sessionStorage.getItem('currentModel'));
             break;
         default:
             loadWelcome(sessionStorage.getItem('langue'));
@@ -66,8 +67,8 @@ function loadWelcome(language){
                 loadBrand(language, key);
             });
 
-            let divCurrentBrandTitle = divTextCreator('class', 'title', brand.name);
-            let divCurrentBrandDescription = divTextCreator('class', 'description', brand.description);
+            let divCurrentBrandTitle = divTextCreator('class', 'brandNames', brand.name);
+            let divCurrentBrandDescription = divTextCreator('class', 'brandDescriptions', brand.description);
             let divCurrentBrandImage = imageCreator('logos', brand.image);
 
             divCurrentBrand.appendChild(divCurrentBrandTitle, divCurrentBrandDescription);
@@ -80,11 +81,11 @@ function loadWelcome(language){
 
 function loadBrand(language, currentBrand){
 
-    
+    sessionStorage.setItem('currentPage', 'brand');
+    sessionStorage.setItem('currentBrand', currentBrand);
     document.getElementById('content').innerHTML = '';
 
     fetchJSON(language, 'brand').then(data => {
-        sessionStorage.setItem('previousPage', sessionStorage.getItem('currentPage'));
         const marque = currentBrand;
 
         document.getElementById('titre').textContent = marque;
@@ -101,19 +102,26 @@ function loadBrand(language, currentBrand){
             divCurrentModel.id = 'model' + count;
             divCurrentModel.className = 'models';
 
+            let divModelName = divTextCreator('class', 'modelNames', model.name);
+            let divModelDescription = divTextCreator('class', 'modelDescriptions', model.description);
+
+            divCurrentModel.appendChild(divModelName);
+            divCurrentModel.appendChild(divModelDescription);
+
+            document.getElementById('content').appendChild(divCurrentModel);
 
            console.log(model);
            count++;
         })
-
-        sessionStorage.setItem('currentPage', 'brand');
 
         console.log('currentPage', sessionStorage.getItem('currentPage'));
         console.log('previousPage', sessionStorage.getItem('previousPage'));
     })
 }
 
-function loadModel(language, model){
+function loadModel(language, currentModel){
+
+    sessionStorage.setItem('currentModel', currentModel)
 }
 
 function fetchJSON(langue, jsonFile){
