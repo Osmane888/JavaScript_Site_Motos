@@ -18,7 +18,7 @@
         "model4": {
             "name": "Ninja H2",
             "description": "La Ninja H2 est une super moto équipée d'un compresseur, offrant des performances exceptionnelles pour les pilotes les plus exigeants.",
-            "img": "../images/ninja/ninjaH2.png"
+            "img": "../images/ninja/H2.png"
         }
     },
     "ducati": {

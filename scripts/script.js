@@ -69,7 +69,7 @@ function loadWelcome(language){
 
             let divCurrentBrandTitle = divTextCreator('class', 'brandNames', brand.name);
             let divCurrentBrandDescription = divTextCreator('class', 'brandDescriptions', brand.description);
-            let divCurrentBrandImage = imageCreator('logos', brand.image);
+            let divCurrentBrandImage = divImageCreator('logos', brand.image);
 
             divCurrentBrand.appendChild(divCurrentBrandTitle, divCurrentBrandDescription);
             divCurrentBrand.appendChild(divCurrentBrandDescription);
@@ -104,9 +104,15 @@ function loadBrand(language, currentBrand){
 
             let divModelName = divTextCreator('class', 'modelNames', model.name);
             let divModelDescription = divTextCreator('class', 'modelDescriptions', model.description);
+            let divModelImage = divImageCreator('modelsPhoto', model.img);
 
             divCurrentModel.appendChild(divModelName);
             divCurrentModel.appendChild(divModelDescription);
+            divCurrentModel.appendChild(divModelImage);
+            
+            divCurrentModel.addEventListener('click', () => {
+                loadModel(language, model.name);
+            })
 
             document.getElementById('content').appendChild(divCurrentModel);
 
@@ -121,7 +127,13 @@ function loadBrand(language, currentBrand){
 
 function loadModel(language, currentModel){
 
+    document.getElementById('content').innerHTML = '';
     sessionStorage.setItem('currentModel', currentModel)
+
+    let divText = divTextCreator('id', 'test', 'LA PAGE DU MODELE ' + currentModel);
+
+    document.getElementById('content').appendChild(divText);
+    console.log('la page pour le modèle => ' + currentModel);
 }
 
 function fetchJSON(langue, jsonFile){
@@ -166,7 +178,7 @@ function divTextCreator(attribute, name, content){
     return div;
 }
 
-function imageCreator(className, url){
+function divImageCreator(className, url){
     /*
     cette fonction a pour but d'automatiser la création des balises img dans le HTML. 
     Il faut spécifier le nom de la classe et la source de l'image.
