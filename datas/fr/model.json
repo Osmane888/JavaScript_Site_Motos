@@ -1,5 +1,5 @@
 {
-  "Ninja": {
+  "ninja": {
     "Ninja 400": {
       "description": "La Ninja 400 est une moto sportive légère et puissante, idéale pour les pilotes débutants et expérimentés.",
       "img": "../images/ninja/ninja400.png",
@@ -21,7 +21,7 @@
       "price": "28 999 €"
     }
   },
-  "Ducati": {
+  "ducati": {
     "Monster": {
       "description": "La Monster est une moto naked emblématique de Ducati, connue pour son design agressif et ses performances élevées.",
       "img": "../images/ducati/ducatiMonster.jpg",
@@ -43,7 +43,7 @@
       "price": "20 999 €"
     }
   },
-  "Honda": {
+  "honda": {
     "CB500F": {
       "description": "La CB500F est une moto naked polyvalente, idéale pour les pilotes débutants et expérimentés.",
       "img": "../images/honda/hondaCB500F.jpeg",
@@ -65,7 +65,7 @@
       "price": "29 999 €"
     }
   },
-  "Kawasaki": {
+  "kawasaki": {
     "Z650": {
       "description": "La Z650 est une moto naked polyvalente, idéale pour les pilotes débutants et expérimentés.",
       "img": "../images/kawasaki/kawasakiZ650.png",

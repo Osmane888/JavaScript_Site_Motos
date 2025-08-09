@@ -96,6 +96,7 @@ function loadBrand(language, currentBrand){
         const models = data[currentBrand];
         console.log(models);
         let count = 1;
+
         Object.values(models).forEach( model => {
 
             let divCurrentModel = document.createElement('div');
@@ -111,7 +112,7 @@ function loadBrand(language, currentBrand){
             divCurrentModel.appendChild(divModelImage);
             
             divCurrentModel.addEventListener('click', () => {
-                loadModel(language, model.name);
+                loadModel(language, model.name, currentBrand);
             })
 
             document.getElementById('content').appendChild(divCurrentModel);
@@ -122,19 +123,26 @@ function loadBrand(language, currentBrand){
 
         console.log('currentPage', sessionStorage.getItem('currentPage'));
         console.log('previousPage', sessionStorage.getItem('previousPage'));
-    })
+    });
+
 }
 
-function loadModel(language, currentModel){
+function loadModel(language, currentModel, currentBrand){
 
     document.getElementById('content').innerHTML = '';
     sessionStorage.setItem('currentModel', currentModel)
 
-    let divText = divTextCreator('id', 'test', 'LA PAGE DU MODELE ' + currentModel);
+    let divCurrentModelTitre = divTextCreator('id', 'modelName', 'LA PAGE DU MODELE ' + currentModel);
+    let divCurrentModelDescription = divTextCreator('id', 'modelDescription', 'DKFJJ');
+/*
+    fetchJSON(language, 'model').then(data => {
 
-    document.getElementById('content').appendChild(divText);
+    })
+*/
+    document.getElementById('content').appendChild(divCurrentModelTitre);
+    console.log('la page pour la marque => ' + currentBrand);
     console.log('la page pour le modèle => ' + currentModel);
-}
+};
 
 function fetchJSON(langue, jsonFile){
     if(!langue && !jsonFile){

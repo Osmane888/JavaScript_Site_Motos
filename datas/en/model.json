@@ -1,5 +1,5 @@
 {
-  "Ninja": {
+  "ninja": {
     "Ninja 400": {
       "description": "The Ninja 400 is a lightweight and powerful sports bike, ideal for both beginner and experienced riders.",
       "img": "../images/ninja/ninja400.png",
@@ -21,7 +21,7 @@
       "price": "28 999 €"
     }
   },
-  "Ducati": {
+  "ducati": {
     "Monster": {
       "description": "The Monster is an iconic naked bike from Ducati, known for its aggressive design and high performance.",
       "img": "../images/ducati/ducatiMonster.jpg",
@@ -43,7 +43,7 @@
       "price": "20 999 €"
     }
   },
-  "Honda": {
+  "honda": {
     "CB500F": {
       "description": "The CB500F is a versatile naked bike, ideal for both beginner and experienced riders.",
       "img": "../images/honda/hondaCB500F.jpeg",
@@ -65,7 +65,7 @@
       "price": "29 999 €"
     }
   },
-  "Kawasaki": {
+  "kawasaki": {
     "Z650": {
       "description": "The Z650 is a versatile naked bike, ideal for both beginner and experienced riders.",
       "img": "../images/kawasaki/kawasakiZ650.png",

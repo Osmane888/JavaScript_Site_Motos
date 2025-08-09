@@ -1,5 +1,5 @@
 {
-  "Ninja": {
+  "ninja": {
     "Ninja 400": {
       "description": "De Ninja 400 is een lichtgewicht en krachtige sportmotor, ideaal voor zowel beginnende als ervaren rijders.",
       "img": "../images/ninja/ninja400.png",
@@ -21,7 +21,7 @@
       "price": "28 999 €"
     }
   },
-  "Ducati": {
+  "ducati": {
     "Monster": {
       "description": "De Monster is een iconische naked bike van Ducati, bekend om zijn agressieve design en hoge prestaties.",
       "img": "../images/ducati/ducatiMonster.jpg",
@@ -43,7 +43,7 @@
       "price": "20 999 €"
     }
   },
-  "Honda": {
+  "honda": {
     "CB500F": {
       "description": "De CB500F is een veelzijdige naked bike, ideaal voor zowel beginnende als ervaren rijders.",
       "img": "../images/honda/hondaCB500F.jpeg",
@@ -65,7 +65,7 @@
       "price": "29 999 €"
     }
   },
-  "Kawasaki": {
+  "kawasaki": {
     "Z650": {
       "description": "De Z650 is een veelzijdige naked bike, ideaal voor zowel beginnende als ervaren rijders.",
       "img": "../images/kawasaki/kawasakiZ650.png",
