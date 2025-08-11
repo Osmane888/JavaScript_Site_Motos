@@ -134,11 +134,12 @@ function loadModel(language, currentModel, currentBrand){
 
     let divCurrentModelTitre = divTextCreator('id', 'modelName', 'LA PAGE DU MODELE ' + currentModel);
     let divCurrentModelDescription = divTextCreator('id', 'modelDescription', 'DKFJJ');
-/*
-    fetchJSON(language, 'model').then(data => {
 
+    fetchJSON(language, 'model').then(data => {
+        const loadedModel = data[currentBrand][currentModel];
+        console.log(loadedModel);
     })
-*/
+
     document.getElementById('content').appendChild(divCurrentModelTitre);
     console.log('la page pour la marque => ' + currentBrand);
     console.log('la page pour le modèle => ' + currentModel);
