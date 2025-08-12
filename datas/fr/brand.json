@@ -3,88 +3,88 @@
         "model1": {
             "name": "Ninja 400",
             "description": "La Ninja 400 est une moto sportive légère et puissante, idéale pour les pilotes débutants et expérimentés.",
-            "img": "../images/ninja/ninja400.png"
+            "img": "./images/ninja/ninja400.png"
         },
         "model2": {
             "name": "Ninja 650",
             "description": "La Ninja 650 offre un équilibre parfait entre puissance et maniabilité, idéale pour les trajets quotidiens et les sorties sportives.",
-            "img": "../images/ninja/ninja650.png"
+            "img": "./images/ninja/ninja650.png"
         },
         "model3": {
             "name": "Ninja 1000",
             "description": "La Ninja 1000 est une moto sportive haut de gamme, conçue pour les pilotes exigeants recherchant des performances élevées.",
-            "img": "../images/ninja/ninja1000.jpg"
+            "img": "./images/ninja/ninja1000.jpg"
         },
         "model4": {
             "name": "Ninja H2",
             "description": "La Ninja H2 est une super moto équipée d'un compresseur, offrant des performances exceptionnelles pour les pilotes les plus exigeants.",
-            "img": "../images/ninja/H2.png"
+            "img": "./images/ninja/H2.png"
         }
     },
     "ducati": {
         "model1": {
             "name": "Monster",
             "description": "La Monster est une moto naked emblématique de Ducati, connue pour son design agressif et ses performances élevées.",
-            "img": "../images/ducati/ducatiMonster.jpg"
+            "img": "./images/ducati/ducatiMonster.jpg"
         },
         "model2": {
             "name": "Panigale V4",
             "description": "La Panigale V4 est une moto sportive haut de gamme, équipée d'un moteur V4 puissant et de technologies avancées.",
-            "img": "../images/ducati/ducatiPanigaleV4.jpg"
+            "img": "./images/ducati/ducatiPanigaleV4.jpg"
         },
         "model3": {
             "name": "Multistrada",
             "description": "La Multistrada est une moto polyvalente, idéale pour les trajets quotidiens et les aventures sur route.",
-            "img": "../images/ducati/ducatiMultistrada.jpg"
+            "img": "./images/ducati/ducatiMultistrada.jpg"
         },
         "model4": {
             "name": "Diavel",
             "description": "La Diavel est une moto cruiser puissante et élégante, conçue pour les pilotes recherchant un mélange de style et de performance.",
-            "img": "../images/ducati/ducatiDiavel.jpg"
+            "img": "./images/ducati/ducatiDiavel.jpg"
         }
     },
     "honda": {
         "model1": {
             "name": "CB500F",
             "description": "La CB500F est une moto naked polyvalente, idéale pour les pilotes débutants et expérimentés.",
-            "img": "../images/honda/hondaCB500F.jpeg"
+            "img": "./images/honda/hondaCB500F.jpeg"
         },
         "model2": {
             "name": "CBR650R",
             "description": "La CBR650R est une moto sportive puissante et maniable, conçue pour les pilotes recherchant des performances élevées.",
-            "img": "../images/honda/hondaCBR650R.png"
+            "img": "./images/honda/hondaCBR650R.png"
         },
         "model3": {
             "name": "Africa Twin",
             "description": "L'Africa Twin est une moto d'aventure polyvalente, idéale pour les trajets quotidiens et les aventures hors route.",
-            "img": "../images/honda/hondaAfricaTwin.jpg"
+            "img": "./images/honda/hondaAfricaTwin.jpg"
         },
         "model4": {
             "name": "Gold Wing",
             "description": "La Gold Wing est une moto de tourisme haut de gamme, conçue pour les longs trajets et le confort.",
-            "img": "../images/honda/hondaGoldWing.png"
+            "img": "./images/honda/hondaGoldWing.png"
         }
     },
     "kawasaki": {
         "model1": {
             "name": "Z650",
             "description": "La Z650 est une moto naked polyvalente, idéale pour les pilotes débutants et expérimentés.",
-            "img": "../images/kawasaki/kawasakiZ650.png"
+            "img": "./images/kawasaki/kawasakiZ650.png"
         },
         "model2": {
             "name": "Ninja ZX-6R",
             "description": "La Ninja ZX-6R est une moto sportive puissante et maniable, conçue pour les pilotes recherchant des performances élevées.",
-            "img": "../images/kawasaki/kawasakiZX6R.jpg"
+            "img": "./images/kawasaki/kawasakiZX6R.jpg"
         },
         "model3": {
             "name": "Versys 650",
             "description": "La Versys 650 est une moto d'aventure polyvalente, idéale pour les trajets quotidiens et les aventures hors route.",
-            "img": "../images/kawasaki/kawasakiVersys650.png"
+            "img": "./images/kawasaki/kawasakiVersys650.png"
         },
         "model4": {
             "name": "Vulcan S",
             "description": "La Vulcan S est une moto cruiser puissante et élégante, conçue pour les pilotes recherchant un mélange de style et de performance.",
-            "img": "../images/kawasaki/kawasakiVulcanS.png"
+            "img": "./images/kawasaki/kawasakiVulcanS.png"
         }
     }
 }

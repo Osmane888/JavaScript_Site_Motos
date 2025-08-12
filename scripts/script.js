@@ -31,7 +31,7 @@ function changeLanguage(language) {
             loadBrand(sessionStorage.getItem('langue'), sessionStorage.getItem('currentBrand'));
             break;
         case 'model':
-            loadModel(sessionStorage.getItem('langue'), sessionStorage.getItem('currentModel'));
+            loadModel(sessionStorage.getItem('langue'), sessionStorage.getItem('currentModel'), sessionStorage.getItem('currentBrand'));
             break;
         default:
             loadWelcome(sessionStorage.getItem('langue'));
@@ -62,6 +62,7 @@ function loadWelcome(language){
             /* Première version du bouton qui est la plus "simple" puis qu'elle consiste à ajouter l'attribut onclick
             divCurrentBrand.setAttribute('onclick', `loadBrand('${language}', '${key}')`);
             */
+           
             // Version 2 plus lisible
             divCurrentBrand.addEventListener('click', () => {
                 loadBrand(language, key);
@@ -130,12 +131,21 @@ function loadBrand(language, currentBrand){
 function loadModel(language, currentModel, currentBrand){
 
     document.getElementById('content').innerHTML = '';
-    sessionStorage.setItem('currentModel', currentModel)
+    sessionStorage.setItem('currentPage', 'model');
+    sessionStorage.setItem('currentModel', currentModel);
+    sessionStorage.setItem('currentBrand', currentBrand);
 
     let divCurrentModelTitre = divTextCreator('id', 'modelName', 'LA PAGE DU MODELE ' + currentModel);
     let divCurrentModelDescription = divTextCreator('id', 'modelDescription', 'DKFJJ');
 
     fetchJSON(language, 'model').then(data => {
+        /*
+        Data contient l'entièreté du contenu dans le model.JSON, ça permet de facilité le chargement des json en fonction
+        de la langue sélectionnée mais il faut donc préciser la marque et le modèle en paramètre pour retrouver le bon
+        modèle dans le fichier. C'est en écrivant cette fonction que je me suis rendu compte que j'aurai probablement dû
+        faire un json par marque pour faciliter la manipulation de l'objet mais j'ai la flemme de changer toute la structure des json.
+        */
+
         const loadedModel = data[currentBrand][currentModel];
         console.log(loadedModel);
 
@@ -170,7 +180,7 @@ function fetchJSON(langue, jsonFile){
     }
 
     // Récupération des données du JSON
-    return fetch(`../datas/${langue}/${jsonFile}.json`)
+    return fetch(`./datas/${langue}/${jsonFile}.json`)
         .then(data => {
             return data.json();
         })
