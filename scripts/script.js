@@ -138,6 +138,16 @@ function loadModel(language, currentModel, currentBrand){
     fetchJSON(language, 'model').then(data => {
         const loadedModel = data[currentBrand][currentModel];
         console.log(loadedModel);
+
+        let divModelTitle = divTextCreator('id', 'modelTitle', currentModel);
+        let divModelDescription = divTextCreator('id', 'modelDescription', loadedModel.description);
+        let divModelPrice = divTextCreator('id', 'modelPrice', loadedModel.price);
+        let divModelImg = divImageCreator('ModelImg', loadedModel.img);
+
+        document.getElementById('content').appendChild(divModelTitle);
+        document.getElementById('content').appendChild(divModelDescription);
+        document.getElementById('content').appendChild(divModelPrice);
+        document.getElementById('content').appendChild(divModelImg);
     })
 
     document.getElementById('content').appendChild(divCurrentModelTitre);
