@@ -19,8 +19,18 @@ let button = document.getElementById('language');
 
     let titre = divTextCreator('id', 'titre');
     let description = divTextCreator('id', 'description');
+    
+    //Le bouton HOME pour revenir à la page d'accueil avec la langue mémorisée
+    let homeButton = document.createElement('button');
+    homeButton.setAttribute('id', 'homeButton');
+    homeButton.innerHTML = 'HOME';
+    homeButton.addEventListener('click', () => {
+        loadWelcome(sessionStorage.getItem('langue'));
+    });
+
     document.getElementById('header').appendChild(titre);
     document.getElementById('header').appendChild(description);
+    document.getElementById('header').appendChild(homeButton);
 });
 
 
@@ -82,6 +92,7 @@ function loadWelcome(language){
 
 function loadBrand(language, currentBrand){
 
+    sessionStorage.setItem('previousPage', sessionStorage.getItem('currentPage'));
     sessionStorage.setItem('currentPage', 'brand');
     sessionStorage.setItem('currentBrand', currentBrand);
     document.getElementById('content').innerHTML = '';
@@ -130,11 +141,13 @@ function loadBrand(language, currentBrand){
 
 function loadModel(language, currentModel, currentBrand){
 
-    document.getElementById('content').innerHTML = '';
+    sessionStorage.setItem('previousPage', sessionStorage.getItem('currentPage'));
+    
     sessionStorage.setItem('currentPage', 'model');
     sessionStorage.setItem('currentModel', currentModel);
     sessionStorage.setItem('currentBrand', currentBrand);
 
+    document.getElementById('content').innerHTML = '';
     let divCurrentModelTitre = divTextCreator('id', 'modelName', 'LA PAGE DU MODELE ' + currentModel);
     let divCurrentModelDescription = divTextCreator('id', 'modelDescription', 'DKFJJ');
 
@@ -163,6 +176,9 @@ function loadModel(language, currentModel, currentBrand){
     document.getElementById('content').appendChild(divCurrentModelTitre);
     console.log('la page pour la marque => ' + currentBrand);
     console.log('la page pour le modèle => ' + currentModel);
+
+    console.log('currentPage', sessionStorage.getItem('currentPage'));
+    console.log('previousPage', sessionStorage.getItem('previousPage'));
 };
 
 function fetchJSON(langue, jsonFile){
