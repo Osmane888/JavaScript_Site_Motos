@@ -1,31 +1,139 @@
+/* ===== GLOBAL ===== */
+* { box-sizing: border-box; }
 body {
-    margin: 0;
-    font-family: "Orbitron", sans-serif;
-    background: #0d0d0d;
-    color: #e0e0e0;
+  margin: 0;
+  font-family: "Verdana", system-ui, Arial, sans-serif;
+  background: #fff7f5;
+  color: #4b4b4b;
 }
+
+/* ===== HEADER ===== */
 #header {
-    background: linear-gradient(90deg, #8e2de2, #4a00e0);
-    color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  background: #ffe3e8;      /* rose pastel */
+  color: #5a3e36;
+  flex-wrap: wrap;
 }
-#header button, #langueSwitches .language {
-    background: #00f5d4;
-    color: #000;
-    border: 1px solid #0ff;
+
+#langueSwitches { display: flex; gap: 10px; }
+
+#langueSwitches .language,
+#homeButton, #previousButton, #header button {
+  padding: 6px 12px;
+  border: 1px solid #ffc6cf;
+  border-radius: 10px;
+  background: #ffb6c1;
+  color: #5a3e36;
+  cursor: pointer;
+  transition: transform .15s ease, background .2s ease, box-shadow .2s ease;
 }
-#header button:hover, #langueSwitches .language:hover {
-    background: #00c2a8;
+#langueSwitches .language:hover,
+#homeButton:hover, #previousButton:hover, #header button:hover {
+  background: #ff98a7;
+  box-shadow: 0 0 0 3px rgba(255,182,193,.25);
+  transform: translateY(-1px);
 }
+
+/* Titres dans le header */
+#titre, #description {
+  flex: 1 1 100%;
+  text-align: center;
+  margin: 4px 0;
+}
+#titre { font-size: 1.8rem; font-weight: 700; color: #5a3e36; }
+#description { font-size: 1.05rem; color: #7a5a52; }
+
+/* ===== CONTENU (WELCOME & BRAND) ===== */
+#content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  padding: 20px;
+}
+
 .brands, .models {
-    background: #111;
-    border: 2px solid #8e2de2;
-    color: #fff;
+  width: 260px;
+  text-align: center;
+  background: #ffffff;
+  border: 2px solid #ffd6dd;
+  border-radius: 14px;
+  padding: 12px;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  cursor: pointer;
 }
 .brands:hover, .models:hover {
-    transform: scale(1.07);
-    box-shadow: 0 0 15px #8e2de2, 0 0 30px #4a00e0;
+  transform: translateY(-4px);
+  border-color: #ffb6c1;
+  box-shadow: 0 10px 20px rgba(255,182,193,.35);
 }
-#content.model-page .infos div {
-    background: #111;
-    border: 1px solid #00f5d4;
+
+/* IMAGES CATALOGUE */
+.logos, .modelsPhoto {
+  display: block;
+  width: 100%;
+  height: 170px;             /* uniforme */
+  object-fit: contain;       /* ⚠️ pas de rognage */
+  background: #fff0f2;       /* fond doux pour ratios variés */
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* Textes cartes */
+.brandNames, .modelNames { font-weight: 700; margin: 6px 0 4px; color: #5a3e36; }
+.brandDescriptions, .modelDescriptions { font-size: .95rem; color: #7a6f6c; }
+
+/* ===== PAGE MODEL ===== */
+#content { align-items: flex-start; }
+
+/* Image principale */
+.ModelImg {
+  order: 1;
+  flex: 1 1 480px;
+  width: 100%;
+  max-width: 540px;
+  max-height: 340px;
+  object-fit: contain;       /* ⚠️ redimensionnement, pas de crop */
+  background: #fff0f2;
+  border: 2px solid #ffd6dd;
+  border-radius: 14px;
+  padding: 10px;
+  box-shadow: 0 6px 16px rgba(255,182,193,.35);
+}
+
+/* Titres modèle */
+#modelName, #modelTitle {
+  order: 0;
+  flex: 1 1 100%;
+  font-size: 1.9rem;
+  font-weight: 800;
+  margin: 4px 0 10px;
+  text-align: left;
+  color: #5a3e36;
+}
+
+/* Infos 2 colonnes */
+#modelDescription, #modelPrice {
+  order: 2;
+  flex: 1 1 300px;
+  min-width: 260px;
+  background: #fff0f2;
+  border: 2px solid #ffd6dd;
+  border-radius: 14px;
+  padding: 14px;
+  color: #5a3e36;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .ModelImg {
+    flex-basis: 100%;
+    max-width: 100%;
+    max-height: 260px;
+  }
+  #modelDescription, #modelPrice { flex-basis: 100%; }
 }

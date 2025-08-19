@@ -1,4 +1,4 @@
-/* GENERAL */
+/* === GLOBAL === */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -9,12 +9,12 @@ body {
 /* HEADER */
 #header {
     display: flex;
-    justify-content: space-between; /* langues à gauche, boutons à droite */
+    justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 12px 20px;
     background: #2c3e50;
     color: white;
-    flex-wrap: wrap; /* pour être responsive */
+    flex-wrap: wrap;
 }
 
 #langueSwitches {
@@ -37,22 +37,16 @@ body {
     background: #2980b9;
 }
 
-/* TITRE & DESCRIPTION */
+/* TITRES */
 #titre, #description {
     flex: 1 1 100%;
     text-align: center;
-    margin: 5px 0;
+    margin: 6px 0;
 }
-#titre {
-    font-size: 1.8em;
-    font-weight: bold;
-}
-#description {
-    font-size: 1.2em;
-    color: #ddd;
-}
+#titre { font-size: 1.8em; font-weight: bold; }
+#description { font-size: 1.2em; color: #ddd; }
 
-/* WELCOME & BRAND (CATALOGUE) */
+/* === WELCOME & BRAND (catalogue) === */
 #content {
     display: flex;
     flex-wrap: wrap;
@@ -66,7 +60,7 @@ body {
     text-align: center;
     background: white;
     border-radius: 8px;
-    padding: 10px;
+    padding: 12px;
     transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
 }
@@ -75,24 +69,19 @@ body {
     box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
-.brands img, .models img {
+.logos, .modelsPhoto {
     width: 100%;
-    height: 180px;
-    object-fit: contain; /* redimensionne sans rogner */
+    height: 160px;         /* ✅ taille fixe et homogène */
+    object-fit: contain;   /* redimensionne sans rogner */
     border-radius: 6px;
     margin-bottom: 10px;
 }
 
-.brandNames, .modelNames {
-    font-weight: bold;
-    margin: 5px 0;
-}
-.brandDescriptions, .modelDescriptions {
-    font-size: 0.9em;
-    color: #555;
-}
+/* Textes */
+.brandNames, .modelNames { font-weight: bold; margin: 5px 0; }
+.brandDescriptions, .modelDescriptions { font-size: 0.9em; color: #555; }
 
-/* MODEL (PAGE DÉTAILLÉE) */
+/* === MODEL PAGE === */
 #content.model-page {
     display: flex;
     flex-wrap: wrap;
@@ -101,27 +90,31 @@ body {
     align-items: flex-start;
 }
 
-#content.model-page img {
+/* ✅ IMAGE PRINCIPALE DU MODÈLE */
+.ModelImg {
     flex: 1 1 45%;
-    max-width: 600px;
+    max-width: 500px;   /* largeur max */
+    max-height: 320px;  /* hauteur max (évite les géantes) */
+    width: 100%;
     object-fit: contain;
+    border-radius: 8px;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-#content.model-page .infos {
-    flex: 1 1 45%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
+/* ✅ INFOS À DROITE EN 2 COLONNES */
 #modelTitle {
     font-size: 2em;
     font-weight: bold;
     width: 100%;
+    margin-bottom: 15px;
 }
+
 #modelDescription, #modelPrice {
     flex: 1 1 45%;
     background: #ecf0f1;
-    padding: 10px;
+    padding: 12px;
     border-radius: 6px;
+    box-sizing: border-box;
 }

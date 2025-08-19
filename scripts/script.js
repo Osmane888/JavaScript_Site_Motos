@@ -143,7 +143,6 @@ function loadBrand(language, currentBrand){
         console.log('currentPage', sessionStorage.getItem('currentPage'));
         console.log('previousPage', sessionStorage.getItem('previousPage'));
     });
-
 }
 
 function loadModel(language, currentModel, currentBrand){
@@ -156,7 +155,6 @@ function loadModel(language, currentModel, currentBrand){
     sessionStorage.setItem('currentBrand', currentBrand);
 
     document.getElementById('content').innerHTML = '';
-    let divCurrentModelTitre = divTextCreator('id', 'modelName', 'La ' + currentModel);
     let divCurrentModelDescription = divTextCreator('id', 'modelDescription', 'DKFJJ');
 
     fetchJSON(language, 'model').then(data => {
@@ -170,7 +168,7 @@ function loadModel(language, currentModel, currentBrand){
         const loadedModel = data[currentBrand][currentModel];
         console.log(loadedModel);
 
-        let divModelTitle = divTextCreator('id', 'modelTitle', currentModel);
+        let divModelTitle = divTextCreator('id', 'modelTitle', 'La ' + currentModel);
         let divModelDescription = divTextCreator('id', 'modelDescription', loadedModel.description);
         let divModelPrice = divTextCreator('id', 'modelPrice', loadedModel.price);
         let divModelImg = divImageCreator('ModelImg', loadedModel.img);
@@ -181,7 +179,6 @@ function loadModel(language, currentModel, currentBrand){
         document.getElementById('content').appendChild(divModelImg);
     })
 
-    document.getElementById('content').appendChild(divCurrentModelTitre);
     console.log('la page pour la marque => ' + currentBrand);
     console.log('la page pour le modèle => ' + currentModel);
 
