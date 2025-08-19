@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background: #1e1e1e;
+    color: #f5f5f5;
+}
+#header {
+    background: #111;
+    color: #0fbcf9;
+}
+#header button, #langueSwitches .language {
+    background: #0fbcf9;
+    color: black;
+}
+#header button:hover, #langueSwitches .language:hover {
+    background: #05a3d8;
+}
+.brands, .models {
+    background: #2c2c2c;
+    border: 1px solid #444;
+}
+.brands:hover, .models:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(15,188,249,0.6);
+}
+#content.model-page .infos div {
+    background: #2c2c2c;
+    border: 1px solid #444;
+}

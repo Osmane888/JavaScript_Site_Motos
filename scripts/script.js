@@ -19,18 +19,9 @@ let button = document.getElementById('language');
 
     let titre = divTextCreator('id', 'titre');
     let description = divTextCreator('id', 'description');
-    
-    //Le bouton HOME pour revenir à la page d'accueil avec la langue mémorisée
-    let homeButton = document.createElement('button');
-    homeButton.setAttribute('id', 'homeButton');
-    homeButton.innerHTML = 'HOME';
-    homeButton.addEventListener('click', () => {
-        loadWelcome(sessionStorage.getItem('langue'));
-    });
 
     document.getElementById('header').appendChild(titre);
     document.getElementById('header').appendChild(description);
-    document.getElementById('header').appendChild(homeButton);
 });
 
 
@@ -133,6 +124,22 @@ function loadBrand(language, currentBrand){
            count++;
         })
 
+
+        //Le bouton HOME pour revenir à la page d'accueil avec la langue mémorisée
+
+        if(!document.getElementById('homeButton')){
+
+        let homeButton = document.createElement('button');
+        homeButton.setAttribute('id', 'homeButton');
+        homeButton.innerHTML = 'HOME';
+
+        homeButton.addEventListener('click', () => {
+            loadWelcome(sessionStorage.getItem('langue'));
+        });
+
+        document.getElementById('header').appendChild(homeButton);
+        }
+
         console.log('currentPage', sessionStorage.getItem('currentPage'));
         console.log('previousPage', sessionStorage.getItem('previousPage'));
     });
@@ -142,13 +149,14 @@ function loadBrand(language, currentBrand){
 function loadModel(language, currentModel, currentBrand){
 
     sessionStorage.setItem('previousPage', sessionStorage.getItem('currentPage'));
+    document.getElementById('content').innerHTML = '';
     
     sessionStorage.setItem('currentPage', 'model');
     sessionStorage.setItem('currentModel', currentModel);
     sessionStorage.setItem('currentBrand', currentBrand);
 
     document.getElementById('content').innerHTML = '';
-    let divCurrentModelTitre = divTextCreator('id', 'modelName', 'LA PAGE DU MODELE ' + currentModel);
+    let divCurrentModelTitre = divTextCreator('id', 'modelName', 'La ' + currentModel);
     let divCurrentModelDescription = divTextCreator('id', 'modelDescription', 'DKFJJ');
 
     fetchJSON(language, 'model').then(data => {
@@ -177,9 +185,28 @@ function loadModel(language, currentModel, currentBrand){
     console.log('la page pour la marque => ' + currentBrand);
     console.log('la page pour le modèle => ' + currentModel);
 
+    let previousButton = document.getElementById('previousButton');
+    if(!document.getElementById('previousButton')){
+        previousButton = document.createElement('button');
+        previousButton.setAttribute('id', 'previousButton');
+        previousButton.textContent = 'PREVIOUS';
+
+        document.getElementById('header').appendChild(previousButton);
+        
+        previousButton.addEventListener('click', () => {
+            loadBrand(sessionStorage.getItem('langue'), sessionStorage.getItem('currentBrand'));
+        });
+    }
+    
+
     console.log('currentPage', sessionStorage.getItem('currentPage'));
     console.log('previousPage', sessionStorage.getItem('previousPage'));
+    console.log('langue actuelle', sessionStorage.getItem('langue'));
 };
+
+function changeStyle(styleFile) {
+    document.getElementById('style').setAttribute('href', `./styles/${styleFile}`);
+}
 
 function fetchJSON(langue, jsonFile){
     if(!langue && !jsonFile){

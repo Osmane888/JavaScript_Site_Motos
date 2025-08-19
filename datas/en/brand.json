@@ -18,7 +18,7 @@
         "model4": {
             "name": "Ninja H2",
             "description": "The Ninja H2 is a super bike equipped with a supercharger, offering exceptional performance for the most demanding riders.",
-            "img": "./images/ninja/ninjaH2.png"
+            "img": "./images/ninja/H2.png"
         }
     },
     "ducati": {
